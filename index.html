@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SpaceX</title>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles/mystyle.css">
+		<script src="scripts/main.js" defer></script>
+
+	</head>
+	<body>
+		<div class="video">
+			<h1>SpaceX</h1>
+
+			<div class="video_container">
+				<video autoplay loop muted>
+					<source src="images/earth.mp4" type="video/mp4">
+			    </video>
+			</div>
+		</div>
+		<div class="content-wrap">
+			<a>
+				<div class="resource" id="fuel_field">
+					<p>Fuel</p>
+					<progress value="50" max="100" id="fuel_progress_bar">
+				</div>
+
+				<div class="resource">
+					<p>Food</p>
+					<progress value="60" max="100" id="food_progress_bar">
+				</div>
+
+				<div class="resource">
+					<p>Water</p>
+					<progress value="80" max="100" id="water_progress_bar">
+				</div>
+
+				<div class="resource" id="speed_field">
+					<p>Speed</p>
+					<a id="random_speed">0</a>
+				</div>
+
+				<div class="weight_converter">
+					<p>How much do you weigh on Earth?</p>
+					<input id="earth_weight" onchange="weight_convert()">
+					<br>
+					<button id="convert_button" onclick="weight_convert()">CONVERT</button>
+					<p>Your weight on Mars is</p>
+					<div id="mars_weight">0</div>
+				</div>
+
+			<div class="footer">
+				<p>Copyright ©SpaceX</p>
+			</div>
+			</a>
+		</div>
+	</body>
+</html>
